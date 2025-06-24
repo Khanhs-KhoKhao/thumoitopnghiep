@@ -29,6 +29,9 @@
                     nameInput.focus();
                     return;
                 }
+                 var audio = document.getElementById("audio");
+                 audio.play();
+                
                 
                 // Update guest name in invitation
                 guestNameDisplay.textContent = guestName;
@@ -48,6 +51,7 @@
                         invitationContent.style.transform = 'translateY(0)';
                     }, 50);
                 }, 300);
+
             });
             
             // Back to form
