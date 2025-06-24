@@ -1,0 +1,237 @@
+ @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap');
+
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #af9c9c 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .invitation-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            max-width: 500px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            transform: perspective(1000px) rotateY(0deg);
+            transition: transform 0.6s ease;
+        }
+        
+        .invitation-card:hover {
+            transform: perspective(1000px) rotateY(5deg) rotateX(2deg);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #6d839e, #2c4589);
+            padding: 40px 30px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.05) 10px,
+                rgba(255, 255, 255, 0.05) 20px
+            );
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+        
+        .graduation-cap {
+            font-size: 3rem;
+            color: #fbbf24;
+            margin-bottom: 15px;
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+            position: relative;
+            z-index: 2;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .card-title {
+            font-family: "Lora", serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .card-subtitle {
+            color: rgba(247, 235, 235, 0.9);
+            font-size: 1.1rem;
+            font-weight: 300;
+            position: relative;
+            z-index: 2;
+            font-family: "Lora", serif;
+        }
+        
+        .card-body {
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .graduate-name {
+            font-family: 'Great Vibes', 'cursive';
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .graduate-name::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #6d90db, #7747cb);
+            border-radius: 2px;
+        }
+        
+        
+        .event-details {
+             border: 1px solid #cbd5e1;
+             border-radius: 8px; 
+             padding: 20px;
+             display: flex;
+             flex-direction: column;
+             gap: 12px;
+             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+             background: #f8fafc;
+        }
+        
+        
+        .detail-item {
+            align-items: flex-start; 
+            min-height: 60px;
+            background: #f9f3f3;
+            border-radius: 6px;
+            padding: 10px 14px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+        }
+
+
+        .detail-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .detail-icon {
+            height: 24px;
+            margin-right: 12px;
+            color: #f66c54;
+            flex-shrink: 0;
+            margin-top: 4px; 
+            width: 24px;
+        }
+
+        
+        .detail-text {
+            flex: 1;
+        }
+        
+        .invitation-text {
+            font-family: "Lora", serif;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #475569;
+            margin-bottom: 25px;
+        }
+        
+        .celebration-emojis {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .card-footer {
+            background: #f1f5f9;
+            padding: 25px 30px;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .footer-text {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        
+        .decorative-dots {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 5px;
+        }
+        
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (max-width: 600px) {
+            .invitation-card {
+                margin: 10px;
+            }
+            
+            .card-title {
+                font-size: 1.7rem;
+            }
+            
+            .graduate-name {
+                font-size: 1.8rem;
+            }
+            
+            .card-header, .card-body {
+                padding: 25px 20px;
+            }
+        }
+        .wr-span {
+            font-family: "Lora", serif;
+            /* font-size: 1 rem; */
+            line-height: 1.3;
+            color: #475569;
+        }
