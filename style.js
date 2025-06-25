@@ -1,3 +1,5 @@
+
+
   // Add some interactive effects
         document.addEventListener('DOMContentLoaded', function() {
             const card = document.querySelector('.invitation-card');
@@ -29,9 +31,11 @@
                     nameInput.focus();
                     return;
                 }
-                 var audio = document.getElementById("audio");
-                 audio.play();
+                var audio = document.getElementById("audio");
+                audio.play();
                 
+                // Thông báo khi tạo thư mời thành công
+                alert("Chúc mừng " + guestName + " đã nhận được thư mời tốt nghiệp của Văn Khánh!");
                 
                 // Update guest name in invitation
                 guestNameDisplay.textContent = guestName;
